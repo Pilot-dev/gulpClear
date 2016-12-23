@@ -3,39 +3,3 @@
   font-style: normal;
   font-weight: normal;
   src: url("fonts/Uni-Sans-Bold.woff2") format("woff2"), url("fonts/Uni-Sans-Bold.woff") format("woff"); }
-
-@font-face {
-  font-family: "UniSansSemiBold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/UniSansSemiBold.woff2") format("woff2"), url("fonts/UniSansSemiBold.woff") format("woff"); }
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/Roboto.woff2") format("woff2"), url("fonts/Roboto.woff") format("woff"); }
-
-@font-face {
-  font-family: "Roboto_bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/Robotobold.woff2") format("woff2"), url("fonts/Robotobold.woff") format("woff"); }
-
-@font-face {
-  font-family: "BebasNeueBold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/BebasNeueBold.woff2") format("woff2"), url("fonts/BebasNeueBold.woff") format("woff"); }
-
-@font-face {
-  font-family: "MyriadPro-Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/MyriadPro-Regular.woff2") format("woff2"), url("fonts/MyriadPro-Regular.woff") format("woff"); }
-
-@font-face {
-  font-family: "MyriadPro-Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("fonts/MyriadPro-Bold.woff2") format("woff2"), url("fonts/MyriadPro-Bold.woff") format("woff"); }

@@ -148,15 +148,7 @@ $(function() {
 });
 
 
-$(document).ready(function() {
-    var number = parseInt($('#counter-number').text(), 10);
-
-    var interval = setInterval(function() {
-        $('#counter-number').text(number+=100);
-
-    }, 1000);
-});
-
+// Perfect Pxel
 
 $('body').each(function() {
     var body = $(this);

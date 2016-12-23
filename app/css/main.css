@@ -12,15 +12,6 @@
   cursor: -webkit-grabbing !important; }
 
 /* ==========================*/
-.bar-long {
-  height: 5px;
-  width: 0px;
-  z-index: 1000;
-  position: fixed;
-  top: 0px;
-  left: 0;
-  background: #1988cc; }
-
 /* ==========================*/
 .tabs__content {
   display: none !important; }
