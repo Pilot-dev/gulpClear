@@ -4,7 +4,7 @@
   "description": "_optimized_gulp_scss",
   "devDependencies": {
     "browser-sync": "^2.11.0",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.4",
     "gulp-concat": "^2.6.0",

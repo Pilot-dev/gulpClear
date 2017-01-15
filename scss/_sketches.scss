@@ -315,55 +315,82 @@ div[id*="modal_politics"]{
 }
 
 
-.slick-next{
-      z-index: 10;
-      right: 0;
-      background: url(../img/slider-next.png) top center no-repeat;
-    }
-.slick-prev{
-      background: url(../img/slider-prev.png) top center no-repeat;
-      z-index: 10;
-      right: 180px;
-  }
+// .slick-next{
+//       z-index: 10;
+//       right: 0;
+//       background: url(../img/slider-next.png) top center no-repeat;
+//     }
+// .slick-prev{
+//       background: url(../img/slider-prev.png) top center no-repeat;
+//       z-index: 10;
+//       right: 180px;
+//   }
+
+// .slick-next, .slick-prev{
+//     position: absolute;
+//     display: block;
+//     cursor: pointer !important;
+//     width: 75px;
+//     height: 13px;
+//     border: none;
+//     outline: none;
+//     top: -40px;
+//   }
 
 .slick-next, .slick-prev{
-    position: absolute;
-    display: block;
-    cursor: pointer !important;
-    width: 75px;
-    height: 13px;
-    border: none;
-    outline: none;
-    top: -40px;
-  }
+  bottom: initial;
+  top: 200px;
+  background: none;
+  width: 20px;
+  height: 20px;
+}
+.slick-next{
+  border-top: 4px solid #000;
+  border-right: 4px solid #000;
+  transform: rotate(45deg);
+  right: 10px;
+  margin: 0;
+}
+.slick-prev{
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  transform: rotate(-45deg);
+  left: 10px;
+  margin: 0;
+}
+.slick-next:hover{
+  border-top: 4px solid $main_color;
+  border-right: 4px solid $main_color;
+  // background: none !important;
+}
+.slick-prev:hover{
+  border-top: 4px solid $main_color;
+  border-left: 4px solid $main_color;
+  // background: none !important;
+}
+.slick-next:before, .slick-prev:before{
+  display: none;
+}
 
 .slick-slide{outline: none;}
 
 
 input::-webkit-input-placeholder{
-  color: black;
-  letter-spacing: 0.16em;
-  color: $main_color;
-  font: 18px $main_font;
+  color: #fefefe;
+  font: 18px/24px $main_font;
 }
 
 input:-moz-placeholder{
-  color: black;
-  letter-spacing: 0.16em;
-  color: $main_color;
-  font: 18px $main_font;
+  color: #fefefe;
+  font: 18px/24px $main_font;
 }
 
 input::-moz-placeholder{
-  color: black;
-  letter-spacing: 0.16em;
-  color: $main_color;
-  font: 18px $main_font;
+  color: #fefefe;
+  font: 18px/24px $main_font;
 }
 
 input:-ms-input-placeholder{
-  color: black;
-  letter-spacing: 0.16em;
-  color: $main_color;
-  font: 18px $main_font;
+  color: #fefefe;
+  font: 18px/24px $main_font;
 }

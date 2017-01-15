@@ -1,3 +1,8 @@
+<!-- <?php
+    require 'db/data.php';
+    require 'db/visits.php';
+?> -->
+
 <!DOCTYPE html>
 <html class="no-js" lang="ru">
 
@@ -24,76 +29,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
-<!--     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"> -->
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
 
 
 
     <!-- RESET -->
     <style>html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{box-sizing:border-box}html,body{height:100%;margin:0;width:100%}.container{max-width:1200px;margin:0 auto}a,button,img,input{-webkit-transition:all .5s;transition:all .5s}button,button:active,button:focus,input,input:active,input:focus,textarea,textarea:active,textarea:focus{outline:none}button,button:hover,a,a:hover{text-decoration:none;cursor:pointer}.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:before,.clearfix:after,.container:before,.container:after{content:'.';display:block;overflow:hidden;visibility:hidden;font-size:0;line-height:0;width:0;height:0}.clearfix:after,.container:after{clear:both}.left{float:left}.right{float:right}.tl{text-align:left}.tr{text-align:right}.tc{text-align:center}.flex{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}</style>
 
-    <!-- Preloader -->
-<!--     <style>#preloader{position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0B0B0B; z-index: 100;}</style> -->
     <!-- GRID -->
     <style>:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-left:-15px;margin-right:-15px}.col-1,.col-sm-1,.col-md-1,.col-lg-1,.col-2,.col-sm-2,.col-md-2,.col-lg-2,.col-3,.col-sm-3,.col-md-3,.col-lg-3,.col-4,.col-sm-4,.col-md-4,.col-lg-4,.col-5,.col-sm-5,.col-md-5,.col-lg-5,.col-6,.col-sm-6,.col-md-6,.col-lg-6,.col-7,.col-sm-7,.col-md-7,.col-lg-7,.col-8,.col-sm-8,.col-md-8,.col-lg-8,.col-9,.col-sm-9,.col-md-9,.col-lg-9,.col-10,.col-sm-10,.col-md-10,.col-lg-10,.col-11,.col-sm-11,.col-md-11,.col-lg-11,.col-12,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{float:left}.col-12{width:100%}.col-11{width:91.66666667%}.col-10{width:83.33333333%}.col-9{width:75%}.col-8{width:66.66666667%}.col-7{width:58.33333333%}.col-6{width:50%}.col-5{width:41.66666667%}.col-4{width:33.33333333%}.col-3{width:25%}.col-2{width:16.66666667%}.col-1{width:8.33333333%}.col-pull-12{right:100%}.col-pull-11{right:91.66666667%}.col-pull-10{right:83.33333333%}.col-pull-9{right:75%}.col-pull-8{right:66.66666667%}.col-pull-7{right:58.33333333%}.col-pull-6{right:50%}.col-pull-5{right:41.66666667%}.col-pull-4{right:33.33333333%}.col-pull-3{right:25%}.col-pull-2{right:16.66666667%}.col-pull-1{right:8.33333333%}.col-pull-0{right:auto}.col-push-12{left:100%}.col-push-11{left:91.66666667%}.col-push-10{left:83.33333333%}.col-push-9{left:75%}.col-push-8{left:66.66666667%}.col-push-7{left:58.33333333%}.col-push-6{left:50%}.col-push-5{left:41.66666667%}.col-push-4{left:33.33333333%}.col-push-3{left:25%}.col-push-2{left:16.66666667%}.col-push-1{left:8.33333333%}.col-push-0{left:auto}.col-offset-12{margin-left:100%}.col-offset-11{margin-left:91.66666667%}.col-offset-10{margin-left:83.33333333%}.col-offset-9{margin-left:75%}.col-offset-8{margin-left:66.66666667%}.col-offset-7{margin-left:58.33333333%}.col-offset-6{margin-left:50%}.col-offset-5{margin-left:41.66666667%}.col-offset-4{margin-left:33.33333333%}.col-offset-3{margin-left:25%}.col-offset-2{margin-left:16.66666667%}.col-offset-1{margin-left:8.33333333%}.col-offset-0{margin-left:0}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}</style>
 
     <!-- FONTS+HEADER -->
-    <style></style>
+    <style>@font-face{font-family:"Roboto";font-style:normal;font-weight:400;src:url(fonts/Roboto.woff2) format("woff2"),url(fonts/Roboto.woff) format("woff")}</style>
 
     <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
-    <script>! function(e) {
-    "use strict";
-    function t(e, t, n) {
-        e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
-    }
-    function n(t, n) {
-        return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
-    }
-    function a(t, a) {
-        if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
-        else {
-            var s = r.createElement("link");
-            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
-        }
-    }
-    function l(e, t) {
-        var n = new XMLHttpRequest;
-        n.open("GET", t, !0), n.onreadystatechange = function() {
-            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
-        }, n.send()
-    }
-    function o(e) {
-        var t = r.createElement("style");
-        t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
-    }
-    var r = e.document;
-    e.loadCSS = function(e, t, n) {
-        var a, l = r.createElement("link");
-        if (t) a = t;
-        else {
-            var o;
-            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
-        }
-        var s = r.styleSheets;
-        l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
-        var c = function(e) {
-            for (var t = l.href, n = s.length; n--;)
-                if (s[n].href === t) return e();
-            setTimeout(function() {
-                c(e)
-            })
-        };
-        return l.onloadcssdefined = c, c(function() {
-            l.media = n || "all"
-        }), l
-    }, e.loadLocalStorageCSS = function(l, o) {
-        n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function() {
-            a(l, o)
-        })
-    }
-}(this);</script>
+    <script>!function(a){"use strict";function b(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function c(b,c){return a.localStorage&&localStorage[b+"_content"]&&localStorage[b+"_file"]===c}function d(b,d){if(a.localStorage&&a.XMLHttpRequest)c(b,d)?f(localStorage[b+"_content"]):e(b,d);else{var h=g.createElement("link");h.href=d,h.id=b,h.rel="stylesheet",h.type="text/css",g.getElementsByTagName("head")[0].appendChild(h),g.cookie=b}}function e(a,b){var c=new XMLHttpRequest;c.open("GET",b,!0),c.onreadystatechange=function(){4===c.readyState&&200===c.status&&(f(c.responseText),localStorage[a+"_content"]=c.responseText,localStorage[a+"_file"]=b)},c.send()}function f(a){var b=g.createElement("style");b.setAttribute("type","text/css"),g.getElementsByTagName("head")[0].appendChild(b),b.styleSheet?b.styleSheet.cssText=a:b.innerHTML=a}var g=a.document;a.loadCSS=function(a,b,c){var d,e=g.createElement("link");if(b)d=b;else{var f;f=g.querySelectorAll?g.querySelectorAll("style,link[rel=stylesheet],script"):(g.body||g.getElementsByTagName("head")[0]).childNodes,d=f[f.length-1]}var h=g.styleSheets;e.rel="stylesheet",e.href=a,e.media="only x",d.parentNode.insertBefore(e,b?d:d.nextSibling);var i=function(a){for(var b=e.href,c=h.length;c--;)if(h[c].href===b)return a();setTimeout(function(){i(a)})};return e.onloadcssdefined=i,i(function(){e.media=c||"all"}),e},a.loadLocalStorageCSS=function(e,f){c(e,f)||g.cookie.indexOf(e)>-1?d(e,f):b(a,"load",function(){d(e,f)})}}(this);</script>
 
 <!--     <link rel="stylesheet" href="css/fonts.css"> -->
     <link rel="stylesheet" href="css/header.css">
@@ -112,54 +68,95 @@
 <body data-img="img/land.jpg">
 <div class="bar-long"></div>
 
-            <form  method="POST" class="form-inline" action="javascript:void(null);">
-                <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="CompanyName">
-                <input type="hidden" name="admin_email" value="alien_202@mail.ru">
-                <input type="hidden" name="form_subject" value="">
-                <input type="hidden" name="goal" value="conversion_1">
-                <!-- END Hidden Required Fields -->
+<form  method="POST" class="form-inline db-form" action="javascript:void(null);">
 
-                <span class="field">
-                    <input type="text" class="form-control" name="name" required=""  placeholder="Ваше имя " />
-                </span>
+    <!-- Hidden DB Fields -->
+
+    <input type="hidden" id="registrationType" name="registrationType" value="default_registration">
+    <input type="hidden" id="orderType" name="orderType" value="Zayavka">
+    <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
+    <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
+    <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
+    <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
+    <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
+    <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
+    <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
+    <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
+    <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
+    <input type="hidden" name="city" value="<?php echo $data['city']; ?>">
+    <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
+    <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
+    <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
+    <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
+    <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
+    <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
+
+    <!-- Zoho -->
+<!--     <input type="hidden" name="product_id" value="2167809000000656177">
+    <input type="hidden" name="product_name" value="&laquo;BootCamp 2&raquo;"> -->
+    <!-- Zoho -->
+
+    <!-- END Hidden DB Fields -->
+
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="CompanyName">
+    <input type="hidden" name="admin_email" value="alien_202@mail.ru">
+    <input type="hidden" name="goal" value="conversion_1">
+    <input type="hidden" name="form_type" value="firstForm ">
+    <!-- END Hidden Required Fields -->
+
+    <span class="field">
+        <input type="text" class="form-control" name="name" required=""  placeholder="Ваше имя " />
+    </span>
 
 
-                <span class="field">
-                    <input placeholder="Ваш телефон" type="tel" class="form-control" name="custom_tel" required="">
-                </span>
+    <span class="field">
+        <input placeholder="Ваш телефон" type="tel" class="form-control" name="custom_tel" required="">
+    </span>
 
-                <span class="field">
-                    <input type="email" required="" placeholder="Ваш E-Mail" name="email" class="form-control">
-                </span>
-
-
-                <button type="submit" class="btn" name="send">Отправить</button>
-
-                <!-- Просто любое дополнительное поле -->
-                <!-- <input type="hidden" name="other_data" value="Любое значение" /> -->
-                <!-- Динамическое дополнительное поле для передачи данных с кнопок по всему сайту -->
-                <input type="hidden" class="pacet" name="form_pacet" value="">
-                <!-- GET RESPONCE INPUTS -->
-                <input type="hidden" name="start_day" value="0"/>
-                <!-- Если нужно отправлять и на почту и на GetResponse - указываем campaign_token -->
-                <input type="hidden" name="campaign_token" value=""/>
-                <!-- GET RESPONCE INPUTS -->
-                <div class="clear"></div>
+    <span class="field">
+        <input type="email" required="" placeholder="Ваш E-Mail" name="email" class="form-control">
+    </span>
 
 
-            </form>
+    <button type="submit" class="btn" name="send">Отправить</button>
+
+
+    <button type="submit" class="btn" name="send"><span>Записаться на консультацию</span></button>
+
+    <!-- Просто любое дополнительное поле -->
+    <!-- <input type="hidden" name="other_data" value="Любое значение" /> -->
+    <!-- Динамическое дополнительное поле для передачи данных с кнопок по всему сайту -->
+    <input type="hidden" class="pacet" name="form_pacet" value="">
+    <!-- GET RESPONCE INPUTS -->
+    <input type="hidden" name="start_day" value="0"/>
+    <!-- Если нужно отправлять и на почту и на GetResponse - указываем campaign_token -->
+    <input type="hidden" name="campaign_token" value=""/>
+    <!-- GET RESPONCE INPUTS -->
+    <div class="clear"></div>
+
+
+</form>
 
 
 <footer>
-    <div class="politics">
-        <a class="md-trigger" data-modal="modal_politics_one">Политика  конфиденциальности</a>
-        <a class="md-trigger" data-modal="modal_politics_two">Отказ от  ответственности</a>
-        <a class="md-trigger" data-modal="modal_politics_three">Согласие с  рассылкой</a>
-    </div>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="politics">
+                    <a class="md-trigger" data-modal="modal_politics_one">Политика  конфиденциальности</a>
+                    <a class="md-trigger" data-modal="modal_politics_two">Отказ от  ответственности</a>
+                    <a class="md-trigger" data-modal="modal_politics_three">Согласие с  рассылкой</a>
+                </div>
+            </div>
+            <div class="col-3">
+                <a class="logo_rezart" target="_blank" href="http://rezart.com.ua/"><img src="img/logo-rezart.png" alt="" ></a>
+                <a class="footer-fire" target="_blank" href="http://willcatchfire.com/"></a>
+            </div>
+        </div>
     </div>
 </footer>
+
 
 <div class="hidden">
     <div class="md-modal md-effect-1" id="modal_callback">
@@ -171,12 +168,40 @@
                 <h2 class="colored">Заказ обратного звонка</h2>
             </div>
             <div>
-                <form  method="POST" class="form-inline" action="javascript:void(null);">
+                <form  method="POST" class="form-inline db-form" action="javascript:void(null);">
+                    <!-- Hidden DB Fields -->
+
+                    <input type="hidden" id="registrationType" name="registrationType" value="default_registration">
+                    <input type="hidden" id="orderType" name="orderType" value="Zayavka">
+                    <input type="hidden" name="page_url" value="<?php echo $data['page_url']; ?>">
+                    <input type="hidden" name="user_agent" value="<?php echo $user_agent; ?>">
+                    <input type="hidden" name="utm_source" value="<?php echo $data['utm_source']; ?>">
+                    <input type="hidden" name="utm_campaign" value="<?php echo $data['utm_campaign']; ?>">
+                    <input type="hidden" name="utm_medium" value="<?php echo $data['utm_medium']; ?>">
+                    <input type="hidden" name="utm_term" value="<?php echo $data['utm_term']; ?>">
+                    <input type="hidden" name="utm_content" value="<?php echo $data['utm_content']; ?>">
+                    <input type="hidden" name="ref" value="<?php echo $data['ref']; ?>">
+                    <input type="hidden" name="ip_address" value="<?php echo $data['ip_address']; ?>">
+                    <input type="hidden" name="city" value="<?php echo $data['city']; ?>">
+                    <input type="hidden" name="client_id" value="<?php echo $data['client_id']; ?>">
+                    <input type="hidden" name="utmcsr" value="<?php echo $data['utmcsr']; ?>">
+                    <input type="hidden" name="utmccn" value="<?php echo $data['utmccn']; ?>">
+                    <input type="hidden" name="utmcmd" value="<?php echo $data['utmcmd']; ?>">
+                    <input type="hidden" name="click_id" value="<?php echo $data['click_id']; ?>">
+                    <input type="hidden" name="affiliate_id" value="<?php echo $data['affiliate_id']; ?>">
+
+                    <!-- Zoho -->
+                <!--     <input type="hidden" name="product_id" value="1212">
+                    <input type="hidden" name="product_name" value="&laquo;BootCamp 2&raquo;"> -->
+                    <!-- Zoho -->
+
+                    <!-- END Hidden DB Fields -->
+
                     <!-- Hidden Required Fields -->
-                    <input type="hidden" name="project_name" value="PeopleWithoutBorders">
+                    <input type="hidden" name="project_name" value="CompanyName">
                     <input type="hidden" name="admin_email" value="alien_202@mail.ru">
-                    <input type="hidden" name="form_subject" value="Заказ обратного звонка">
-                    <input type="hidden" name="goal" value="zvonok">
+                    <input type="hidden" name="goal" value="conversion_1">
+                    <input type="hidden" name="form_type" value="firstForm ">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">

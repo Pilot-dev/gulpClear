@@ -1,6 +1,8 @@
 body {
   position: relative;
-  font: 18px/24px "MyriadPro-Regular", sans-serif;
+  overflow-x: hidden;
+  min-width: 320px;
+  font: 18px/24px "Roboto", sans-serif;
   color: #373f41;
   background-color: #fff; }
 
@@ -27,11 +29,15 @@ button:hover {
   width: 0;
   height: 0; }
 
-.bar-long {
-  height: 5px;
-  width: 0px;
-  z-index: 1000;
-  position: fixed;
-  top: 0px;
-  left: 0;
-  background: #1988cc; }
+.btn {
+  width: 266px;
+  height: 63px;
+  padding-top: 7px;
+  background-color: #ffec3d;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 0 #c5b731;
+  box-shadow: 0 3px 0 #c5b731;
+  color: #000;
+  font: 20px "Roboto", sans-serif;
+  text-transform: uppercase; }
