@@ -159,6 +159,64 @@ $(function() {
   });
 });
 
+// Waypoint
+
+// $('#sec_03').waypoint(
+//   function() {
+//     $( "#sec_03 .item" ).addClass( "animated" );
+//     $( "#sec_03 .item" ).addClass( "flipInX" );
+//   },
+//   {offset: "550px"}
+//   );
+
+// Parallax
+
+$(window).scroll(function() {
+
+  var st = $(this).scrollTop() /100;
+  var tt = $(this).scrollTop() /100;
+
+  $(".paralax_letter").css({
+    "transform" : "translate3d(0px, " + st  + "%, .0px)",
+    "-webkit-transform" : "translate3d(0px, " + st  + "%, .0px)",
+    "-ms-transform" : "translate3d(0px, " + st  + "%, .0px)"
+  });
+
+});
+
+//  UP BUTTON
+
+$( document ).ready(function() {
+  $('#scrollup img').mouseover( function(){
+    $( this ).animate({opacity: 0.65},100);
+  }).mouseout( function(){
+    $( this ).animate({opacity: 1},100);
+  });
+
+  $(window).scroll(function(){
+    if ( $(document).scrollTop() > 0 ) {
+      $('#scrollup').fadeIn('slow');
+    } else {
+      $('#scrollup').fadeOut('slow');
+    }
+  });
+
+  $('#scrollup').click(function() {
+    $('body,html').animate({scrollTop:0},1000);
+  });
+});
+
+// PREVENT SCROLLING
+
+$('*').click(function() {
+  var modal= $(".md-modal");
+  if( modal.hasClass('md-show')){
+    $("body").addClass('unscroll')
+  } else {
+    $("body").removeClass('unscroll');
+  }
+});
+
 
 // Perfect Pxel
 
