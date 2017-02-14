@@ -5,10 +5,10 @@ if (localStorage.name && localStorage.email && localStorage.phone)  {
   $('input[type="tel"]').val(localStorage.phone);
 }
 
-(function() {
+$(function() {
   $("[name=send]").click(function (e) {
    var btn = $(this);
-   var $form = $(this).closest('form');
+   var form = $(this).closest('form');
 
    $(":input.error").removeClass('error');
    $(".allert").remove();
@@ -61,45 +61,38 @@ if (localStorage.name && localStorage.email && localStorage.phone)  {
     $(send_btn).each(function() {
       $(this).attr('disabled', true);
     });
-
+    // Отправка на почту
     $.ajax({
       type: 'POST',
-      url: send_adress,
+      url: 'mail.php',
       data: msg,
       success: function() {
-        $('form').trigger("reset");
         setTimeout(function() {
           $("[name=send]").removeAttr("disabled");
         }, 1000);
-        // Настройки модального окна после удачной отправки
+        $('div.md-show').removeClass('md-show');
         dataLayer.push({
           'form_type': formType,
           'event': "form_submit"
         });
-        yaCounter41024484.reachGoal(goal);
+          // Отправка в базу данных
+          $.ajax({
+           type: 'POST',
+           url: 'db/registration.php',
+           dataType: 'json',
+           data: form.serialize(),
+           success: function(response) {
+             console.info(response);
+             console.log(form.serialize());
+             if (response.status == 'success') {
+              $('form').trigger("reset");
+              window.location.href = 'http://qagirl.pro/success';
+            }
+          }
+        });
       },
       error: function(xhr, str) {
-        dataLayer.push({
-          'form_type': formType,
-          'event': "form_submit"
-        });
-        yaCounter41024484.reachGoal(goal);
-        $('div.md-show').removeClass('md-show');
-        // Отправка в базу данных
-        $.ajax({
-         type: 'POST',
-         url: 'db/registration.php',
-         dataType: 'json',
-         data: $form.serialize(),
-         success: function(response) {
-           console.info(response);
-           console.log($form.serialize());
-           if (response.status == 'success') {
-            $('form').trigger("reset");
-            window.location.href = 'http://allinsol.com/bootcamp/success/';
-          }
-        }
-      });
+        console.log("Erorr")
       }
     });
 
@@ -107,6 +100,9 @@ if (localStorage.name && localStorage.email && localStorage.phone)  {
   return false;
 })
 });
+
+
+
 
 
 
