@@ -13,7 +13,7 @@
 
 }
 
-@media screen and (max-height: 700px){
+@media screen and (max-height: 740px){
   .md_large .md_content {max-height: 320px;}
 }
 
@@ -35,7 +35,7 @@
     }
   }
   div[id*="modal_callback"]{
-    min-width: 320px;
+    min-width: 510px;
     .md-content{
       padding: 35px;
       background: #fff;

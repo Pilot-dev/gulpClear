@@ -101,13 +101,6 @@ $(function() {
 })
 });
 
-
-
-
-
-
-
-
  // Smooth scroll to anchor
 
  $('.scroll').click(function(){
@@ -204,13 +197,16 @@ $( document ).ready(function() {
 
 // PREVENT SCROLLING
 
-$('*').click(function() {
-  var modal= $(".md-modal");
-  if( modal.hasClass('md-show')){
-    $("body").addClass('unscroll')
-  } else {
-    $("body").removeClass('unscroll');
-  }
+$('.md-trigger').click(function() {
+  $("body").addClass('unscroll');
+});
+
+$('.md-close').click(function() {
+  $("body").removeClass('unscroll');
+});
+
+$('.md-overlay').click(function() {
+  $("body").removeClass('unscroll');
 });
 
 
