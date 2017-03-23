@@ -68,7 +68,7 @@ $(function() {
      // Отправка в Google sheets
      $.ajax({
       type: 'POST',
-      url: //'google form action',
+      url: '',
       dataType: 'json',
       data: msg,
     });

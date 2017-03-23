@@ -359,7 +359,7 @@ input:-ms-input-placeholder {
   footer .politics a {
     font-size: 13px; } }
 
-@media screen and (max-height: 740px) {
+@media screen and (max-height: 760px) {
   .md_large .md_content {
     max-height: 320px; } }
 
