@@ -4,7 +4,7 @@
 $db_user = "root"; // Логин БД
 $db_password = "z"; // Пароль БД
 $database = "allinsol_reg"; // БД*/
- $db_host = "qagirl.mysql.ukraine.com.ua";
+$db_host = "qagirl.mysql.ukraine.com.ua";
 $db_user = "qagirl_db"; // Логин БД
 $db_password = "CS3H7lta"; // Пароль БД
 $database = "qagirl_db"; // БД
@@ -35,10 +35,6 @@ fwrite($file, print_r($_POST, 1));
 fwrite($file, ' ------#  ');
 fclose($file);
 
-
-
-
-
 function getVar($name)
 {
   $name = isset($_POST[$name]) ? trim($_POST[$name]) : null;
@@ -56,6 +52,7 @@ function GetClearPhoneNumber($number) {
   $number = str_replace('+', '', $number);
   return $number;
 }
+
 $name = getVar('name');
 $phone = getVar('custom_tel');
 $email = getVar('email');

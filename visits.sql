@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS `visits` (
   `utm_content` varchar(255) NOT NULL,
   `ref` varchar(255) NOT NULL,
   `ip_address` varchar(50) NOT NULL,
-  `city` char(255) NOT NULL,
   `client_id` varchar(255) NOT NULL,
   `utmcsr` varchar(255) NOT NULL,
   `utmccn` varchar(255) NOT NULL,
@@ -35,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `visits` (
   `affiliate_id` varchar(255) NOT NULL,
   `click_id` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49621 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Дамп данных таблицы `visits`

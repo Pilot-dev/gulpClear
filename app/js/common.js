@@ -15,6 +15,10 @@ $(function() {
 
    var error;
    var ref = btn.closest('form').find('[required]');
+   var loc = ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country;
+   $('[name=city').val(loc);
+   var msg = btn.closest('form').find('input, textarea, select');
+   var short_msg = btn.closest('form').find('[name=project_name], [name=admin_email], [name=form_subject], [name=city], [name=page_url], [name=user_agent], [type="text"], [type="email"], [type="tel"]');
    var msg = btn.closest('form').find('input, textarea, select');
    var send_btn = btn.closest('form').find('[name=send]');
    var send_adress = btn.closest('form').find('[name=send_adress]').val();
@@ -61,11 +65,18 @@ $(function() {
     $(send_btn).each(function() {
       $(this).attr('disabled', true);
     });
+     // Отправка в Google sheets
+     $.ajax({
+      type: 'POST',
+      url: //'google form action',
+      dataType: 'json',
+      data: msg,
+    });
     // Отправка на почту
     $.ajax({
       type: 'POST',
       url: 'mail.php',
-      data: msg,
+      data: short_msg,
       success: function() {
         setTimeout(function() {
           $("[name=send]").removeAttr("disabled");
@@ -86,7 +97,7 @@ $(function() {
              console.log(form.serialize());
              if (response.status == 'success') {
               $('form').trigger("reset");
-              window.location.href = 'http://qagirl.pro/success';
+              window.location.href = '/success';
             }
           }
         });
@@ -146,31 +157,6 @@ $(function() {
       $(this).replaceWith(iframe);
     });
   });
-});
-
-// Waypoint
-
-// $('#sec_03').waypoint(
-//   function() {
-//     $( "#sec_03 .item" ).addClass( "animated" );
-//     $( "#sec_03 .item" ).addClass( "flipInX" );
-//   },
-//   {offset: "550px"}
-//   );
-
-// Parallax
-
-$(window).scroll(function() {
-
-  var st = $(this).scrollTop() /100;
-  var tt = $(this).scrollTop() /100;
-
-  $(".paralax_letter").css({
-    "transform" : "translate3d(0px, " + st  + "%, .0px)",
-    "-webkit-transform" : "translate3d(0px, " + st  + "%, .0px)",
-    "-ms-transform" : "translate3d(0px, " + st  + "%, .0px)"
-  });
-
 });
 
 //  UP BUTTON

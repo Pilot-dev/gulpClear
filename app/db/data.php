@@ -1,20 +1,6 @@
 <?php
   $user_agent   =  $_SERVER['HTTP_USER_AGENT'];
 
-  function get_client_county_city($ip) {
-    require 'geoip/geoip2.phar';
-
-    $db = __DIR__ . '/geoip/GeoLite2-City.mmdb';
-
-    $reader = new GeoIp2\Database\Reader($db);
-
-
-    $record = $reader->city($ip);
-    $country_city = $record->city->name;
-
-    return $country_city;
-  }
-
   function get_client_ip() {
     $ipaddress = '';
     if (isset($_SERVER['HTTP_CLIENT_IP']))
@@ -38,6 +24,8 @@
 
     return $ipaddress;
   }
+
+
   if (isset($_COOKIE["__utmz_gtm"])) {
     $cookie_utmz = $_COOKIE["__utmz_gtm"];
     list($utmcsr, $utmccn, $utmcmd) = split('[|]', $cookie_utmz);
@@ -81,7 +69,6 @@
     'utm_content'  => isset($_GET['utm_content']) ? $_GET['utm_content'] : null,
     'ref'          => isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : null,
     'ip_address'   => get_client_ip(),
-    'city'         => get_client_county_city(get_client_ip()),
     'client_id'    => isset($_COOKIE["_ga"]) ? substr($_COOKIE["_ga"], 6) : null,
     'utmcsr'       => isset($utmcsr) ? $utmcsr : null,
     'utmccn'       => isset($utmccn) ? $utmccn : null,
