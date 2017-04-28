@@ -25,6 +25,9 @@ footer {
     width: 80px;
     float: right; }
 
+body {
+  background: url("svg#sec_09-counter"); }
+
 /* ================================*/
 /* CURSOR STYLES*/
 .touch_mode_grab {
