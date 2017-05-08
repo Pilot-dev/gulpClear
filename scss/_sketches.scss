@@ -1,28 +1,6 @@
 @import "bourbon";
 @import "vars.scss";
 
-/* ================================*/
-/* CURSOR STYLES*/
-.touch_mode_grab {
-cursor: grab !important;
-cursor: -webkit-grab !important;
-}
-
-.touch_mode_grabbing {
-cursor: grabbing !important;
-cursor: -webkit-grabbing !important;
-}
-
-
-/* ==========================*/
-
-.tabs__content {
-  display: none !important;
-}
-
-.tabs__content.active {
-  display: block !important;
-}
 
 
 .hidden{

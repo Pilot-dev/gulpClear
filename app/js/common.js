@@ -196,6 +196,18 @@ $('.md-overlay').click(function() {
 });
 
 
+//Sliders
+
+$('.slider').slick({
+  slidesToShow: 1,
+  dots: true,
+  arrows: false,
+  infinite: true,
+  slidesToScroll: 1,
+  fade: true,
+  adaptiveHeight: true
+});
+
 // Perfect Pxel
 
 $('body').each(function() {
