@@ -16,7 +16,7 @@ $(function() {
    var error;
    var ref = btn.closest('form').find('[required]');
    var loc = ymaps.geolocation.city+', '+ymaps.geolocation.region+', '+ymaps.geolocation.country;
-   $('[name=city').val(loc);
+   $('[name=city]').val(loc);
    var msg = btn.closest('form').find('input, textarea, select');
    var short_msg = btn.closest('form').find('[name=project_name], [name=admin_email], [name=form_subject], [name=city], [name=page_url], [name=user_agent], [type="text"], [type="email"], [type="tel"]');
    var msg = btn.closest('form').find('input, textarea, select');
@@ -121,6 +121,7 @@ $(function() {
   return false;
 });
 
+
 //  INPUT TEL MASK
 
 jQuery(function($){
@@ -128,16 +129,15 @@ jQuery(function($){
 });
 
 
-
 // Scroll BAR
 
 $(window).scroll(function() {
-    // calculate the percentage the user has scrolled down the page
-    var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+  // calculate the percentage the user has scrolled down the page
+  var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
 
-    $('.bar-long').css('width', scrollPercent +"%"  );
+  $('.bar-long').css('width', scrollPercent +"%"  );
 
-  });
+});
 
 
 //YOUTUBE
@@ -205,7 +205,15 @@ $('.slider').slick({
   infinite: true,
   slidesToScroll: 1,
   fade: true,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
 });
 
 // Perfect Pxel

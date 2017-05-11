@@ -17,30 +17,37 @@ footer{
   padding: 15px 0 15px;
   background-color: #202020;
   .politics{
-    margin-top: 17px;
+    margin-top: 13px;
     a{
       color: #65666a;
-      font-size: 14px;
+      font-size: 15px;
     }
     a:hover{color: $main_color;}
     a+a{margin-left: 10px;}
   }
   .logo_rezart{
-    margin-top: 5px;
-    margin-left: 25px;
-    width: 80px;
+    margin-top: 3px;
+    margin-left: 0px;
+    width: 55px;
     // margin-right: 20px;
     float: right;
+    svg{
+      fill: #fff;
+      transition: fill .3s;
+    }
+    &:hover{
+      svg{
+        fill: $main_color;
+      }
+    }
   }
 }
 
-
-body{background: url("svg#sec_09-counter");}
 
 //ALWAYS END
 @import "_sketches.scss";
 @import "_media.scss";
 @import "../libs/niftymodal/component.css";
 @import "../libs/slick/slick.min.css";
-@import "../libs/lightbox2/lightbox.min.css";
+// @import "../libs/lightbox2/lightbox.min.css";
 // @import "../fonts/font-awesome/font-awesome.min.css"
